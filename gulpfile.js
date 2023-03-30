@@ -111,7 +111,7 @@ task("watch", () => {
   watch("./src/scss/**/*.scss", series("styles"));
   watch("./src/*.html", series("copy:html"));
   watch("./src/js/*.js", series("scripts"));
-  watch("./src/img/*.svg", series("icons"));
+  watch("./src/img/*.svg", series("svg"));
   watch("./src/img/*.*", series("img"));
   // watch("./src/img/*.mp4", series("video"));
 });
@@ -120,9 +120,9 @@ task(
   "default",
   series(
     "clean",
-    parallel("copy:html", "styles", "scripts", "svg", "img",)
-  ),
-  parallel("watch", "server")
+    parallel("copy:html", "styles", "scripts", "svg", "img","watch", "server")
+  )
+
 );
 task('build',
  series(
