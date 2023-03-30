@@ -1,0 +1,156 @@
+//-------------boards--------------------//
+.boards {
+  background: #f8faf9;
+  align-items: center;
+
+  .bx-wrapper {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+    position: relative;
+  }
+
+  .boards__container {
+    display: flex;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .boards__container--active {
+    position: absolute;
+    left: 100%;
+    overflow: hidden;
+  }
+
+  .boards__img {
+    position: relative;
+    width: 30.1875rem;
+    height: 33.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3.6375rem;
+    padding-left: 4.1875rem;
+
+    @include tablets {
+      margin-right: 0;
+      padding-left: 30px;
+      width: rem(306px);
+      height: rem(414px);
+
+    }
+
+    @include phones {
+      width: rem(243px);
+      height: rem(329px);
+      padding-left: rem(14px);
+      margin-bottom: rem(30px);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 6.1875rem;
+      left: 4.1625rem;
+      background: url(../img/klyaksa.svg) center center/contain no-repeat;
+      width: rem(396px);
+      height: rem(378px);
+      z-index: 0;
+
+      @include tablets {
+        width: rem(306px);
+        height: rem(292px);
+        top: 5.2875rem;
+        left: 0.1625rem;
+      }
+
+      @include phones {
+        width: rem(243px);
+        height: rem(232px);
+        top: 3.9875rem;
+        left: -0.1375rem;
+      }
+    }
+  }
+
+  .boards__image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: rotate(30deg);
+    position: relative;
+    z-index: 2;
+
+    @include tablets {}
+
+    @include phones {}
+  }
+
+  .boards__desc {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 0.4375rem;
+
+    @include tablets {
+      align-items: center;
+    }
+
+  }
+
+  .boards__title {
+    color: inherit;
+    font-size: rem(36px);
+    line-height: rem(43px);
+    margin-bottom: rem(24px);
+
+    @include tablets {
+      font-size: rem(30px);
+      line-height: rem(36px);
+      margin-bottom: rem(14px);
+    }
+  }
+
+  .boards__text {
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.375rem;
+    color: #666666;
+    margin-bottom: 1.5rem;
+    padding-right: 1.5rem;
+
+    @include tablets {
+      padding: 0rem 6rem 0rem 6.8rem;
+      text-align: center;
+    }
+
+    @include phones {
+      padding: 0px rem(40px)
+    }
+  }
+
+  .boards__purchase {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    // @include tablets {
+    //   margin-left: rem(32px);
+    // }
+  }
+
+  .boards__price {
+    font-weight: 300;
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+    text-transform: uppercase;
+    color: #151515;
+    margin-right: rem(32px);
+  }
+}

@@ -1,0 +1,26 @@
+.contacts__link {
+  white-space: nowrap;
+  font-size: rem(21px);
+  line-height: rem(21px);
+  color: inherit;
+}
+
+.contacts__ico {
+  width: rem(12px);
+  height: rem(12px);
+  margin-right: 0.3125rem;
+}
+
+.contacts__adress {
+  font-size: rem(21px);
+  line-height: rem(24px);
+  margin-bottom: rem(6px);
+
+  @include phones {
+    margin-bottom: rem(12px);
+  }
+}
+
+.contacts__link--theme-dark {
+  color: #111;
+}

@@ -1,0 +1,26 @@
+.socials {
+  padding-top: rem(11px);
+}
+.socials__list {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.socials__link {
+  display: block;
+}
+.socials__item:not(:last-child) {
+  margin-right: 1rem;
+}
+.socials__ico {
+  width: rem(20px);
+  height: rem(20px);
+  fill: #b3b3b3;
+  transition: fill 0.3s;
+  &:hover {
+    fill: black;
+  }
+}

@@ -1,0 +1,110 @@
+// ----------------info-block-------------------------//
+.info {
+  align-items: stretch;
+  position: relative;
+  background: url(../img/bacground-main.jpeg) center center / cover no-repeat;
+  color: #ffffff;
+
+  @include tablets {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: rem(91px);
+      background-color: #1968b1;
+    }
+  }
+
+  .info__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 6.3125rem;
+
+    @include tablets {
+      padding-bottom: 0;
+    }
+  }
+
+  .info__title {
+    color: inherit;
+    max-width: 30.8125rem;
+    margin-bottom: 1.25rem;
+
+    @include tablets {
+      text-align: center;
+      max-width: none;
+      margin-bottom: rem(9px);
+    }
+
+    @include phones {
+      font-size: rem(40px);
+      line-height: rem(36px);
+      margin-bottom: rem(12px);
+    }
+  }
+
+  .info__text {
+    font-size: 1.3125rem;
+    line-height: 1.5625rem;
+    margin-bottom: 2.5rem;
+
+    @include tablets {
+      margin-bottom: rem(44px);
+    }
+
+    @include phones {
+      font-size: rem(18px);
+      line-height: rem(20px);
+      margin-bottom: rem(44px);
+    }
+  }
+
+  .info__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .info__item {
+    display: flex;
+    align-items: center;
+    margin-right: rem(33px);
+
+    .info:not(:last-child) {
+      margin-right: 1.875rem;
+    }
+  }
+
+  .info__about {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    max-width: rem(90px);
+  }
+
+  .info__ico {
+    margin-right: 0.9375rem;
+    width: rem(35px);
+    height: rem(35px);
+  }
+
+  .info__body {
+    @include tablets {
+      padding-top: rem(176px);
+      text-align: center;
+    }
+
+    @include phones {
+      padding-top: rem(34px);
+    }
+  }
+
+  .info__desc {
+    @include tablets {
+      visibility: hidden;
+    }
+  }
+}

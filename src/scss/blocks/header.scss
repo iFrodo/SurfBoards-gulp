@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5625rem 0px 0px 0px;
+  z-index: 1;
+  @include tablets {
+    padding: rem(26px)  rem(16px) rem(0px) rem(11px);
+  }
+  @include phones{
+    padding: rem(26px)  rem(0px) rem(0px) rem(0px);
+  }
+}
+
+.header__contacts {
+  @include tablets {
+    display: none;
+  }
+}

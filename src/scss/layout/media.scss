@@ -1,0 +1,24 @@
+
+@function rem($px) {
+  @return $px / 16px + 0rem;
+}
+//regular expression
+//(?!rem\()-?\d+px(?!\))
+//funtcion px to rem
+
+@mixin tablets {
+  @media (max-width: $tablets) {
+    @content;
+  }
+}
+@mixin phones {
+  @media (max-width: $phones) {
+    @content;
+  }
+}
+html {
+  font-size: 16px;
+  @include phones {
+    font-size: 3.333333vmin
+  }
+}

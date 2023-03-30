@@ -1,0 +1,35 @@
+
+.boards__nav {
+  position: absolute;
+  top: 35%;
+  z-index: 10;
+
+  &--prev {
+    left: 0px;
+  }
+  &--next {
+    right: 0px;
+  }
+  @include tablets {
+    top: 27.3%;
+    &--prev {
+      left: 19%;
+    }
+    &--next {
+      right: 19%;
+    }
+  }
+  @include phones {
+    top:rem(168px);
+    &--prev {
+      left: 0;
+    }
+    &--next {
+      right: 0;
+    }
+  }
+}
+.boards__ico {
+  width: 1.5rem;
+  height: 2.5rem;
+}

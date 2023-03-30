@@ -1,0 +1,59 @@
+.burger {
+  display: none;
+  position: relative;
+  width: 1.625rem;
+  height: 1.5rem;
+  background: transparent;
+  border: none;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: rem(4px);
+    left: 0;
+    background-color: #fff;
+    border-radius: 0.270625rem;
+  }
+  transition: opacity .3s, transform .3s;
+
+  span {
+    position: absolute;
+    width: 100%;
+    height: rem(4px);
+    left: 0;
+    top: rem(10px);
+    background-color: #fff;
+    border-radius: 0.270625rem;
+    transition: transform .3s;
+  }
+
+  &::after {
+    bottom: 0;
+  }
+
+  &:before {
+    top: 0;
+  }
+
+  @include tablets {
+    display: block;
+
+  }
+
+  &--active {
+    &::before {
+      opacity: 0;
+    }
+    span{
+      transform: rotate(45deg);
+    }
+    &::after{
+      transform: rotate(-45deg) translate(rem(7px), rem(-7px));
+    }
+
+
+  }
+
+}

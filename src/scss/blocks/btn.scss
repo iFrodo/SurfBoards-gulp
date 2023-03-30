@@ -1,0 +1,27 @@
+.btn {
+  padding: 1.3125rem 2.5rem;
+  background: #fedb3f;
+  border-radius: 6.25rem;
+  font-weight: 800;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  color: #000000;
+  cursor: pointer;
+  border: 0.0625rem solid transparent;
+  text-transform: uppercase;
+  &--theme-transperent {
+    background: transparent;
+    color: #fff;
+    text-transform: none;
+    padding: 1.3125rem 0.6875rem;
+  }
+  &:hover {
+    background: #ffd417a8;
+  }
+}
+.info__button {
+  @include phones {
+    font-size: rem(19px);
+    line-height: rem(18px);
+  }
+}

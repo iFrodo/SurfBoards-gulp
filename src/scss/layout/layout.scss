@@ -1,0 +1,43 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  width: 95%;
+  max-width: rem(940px);
+  margin: 0 auto;
+  position: relative;
+
+}
+
+body {
+  font-family: "Alegreya Sans";
+  font-style: normal;
+  height: 100%;
+}
+
+.section {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.maincontent {
+  height: 100%;
+  transition: transform .8s;
+  will-change: transform;
+}
