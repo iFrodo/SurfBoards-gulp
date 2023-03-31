@@ -602,18 +602,20 @@
                                 <div class="player__splash active "></div>
                             </div>
                             <div class="player__controls">
-
                                 <a class="player__start"></a>
                                 <div class="player__playback">
                                     <a class="player__playback-button"></a>
                                 </div>
-                                <a class="player__volume-button">
-                                    <svg  fill='white' class="player__volume-ico">
-                                        <use xlink:href="./img/sprite.svg#btn-volume"></use>
-                                    </svg>
-                                </a>
-                                <input type="range" class="player__volume">
-                             
+                                <div class="player__volume-box">
+                                    <button class="player__volume-btn">
+                                        <svg fill='white' class="player__volume-ico">
+                                            <use xlink:href="./img/sprite.svg#btn-volume"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="player__volume">
+                                        <input type="range" class="player__volume-input">
+                                    </div>
+                                </div>
                                 </input>
                                 <div class="player__duration">
                                     <span class="player__duration-completed">0:00</span> :

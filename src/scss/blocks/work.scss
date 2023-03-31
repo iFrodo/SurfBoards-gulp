@@ -111,17 +111,31 @@
   left: 0;
 
 }
-.player__volume{
+
+.player__volume-box {
+  display: inline-flex;
+  align-items: center;
+}
+
+.player__volume-ico {
+  width: rem(27px);
+  height: rem(19px);
+
+}
+
+.player__volume-input {
   width: rem(60px);
-  margin: 0 rem(15px);
-  height: rem(4px);
+  margin-right: rem(15px);
+}
+
+.player__volume-btn {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
   cursor: pointer;
-  position: relative;
-  background: url(../img/bar.svg)center center / cover no-repeat;
-  &-ico{
-    width:rem(20px);
-    height: rem(20px);
-  }
+  outline: inherit;
 }
 
 .player__duration {
