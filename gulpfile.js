@@ -1,6 +1,6 @@
 const { src, dest, task, series, watch, parallel } = require("gulp");
 const rm = require("gulp-rm");
-const sass = require("gulp-sass")(require("sass"));
+const sass = require("gulp-sass")(require("dart-sass"));
 const concat = require("gulp-concat");
 const browserSync = require("browser-sync").create();
 const reload = browserSync.reload;
@@ -66,7 +66,7 @@ task("styles", () => {
       .pipe(gulpif(env === "prod", gcmq()))
       .pipe(gulpif(env === "prod", cleanCSS()))
       .pipe(gulpif(env === "dev", sourcemaps.write()))
-      .pipe(dest(DIST_PATH))
+      .pipe(dest(`${DIST_PATH}/css`))
       .pipe(reload({ stream: true }))
   );
 });
@@ -96,8 +96,8 @@ task("svg", () => {
       //   svgo({
       //     plugins: [
       //       {
-      //          oveAttrs: {
-      //         //   attrs: "(fill|stroke|style|width|height|data.*)",
+      //          removeAttrs: {
+      //           attrs: "(fill|stroke|style|width|height|data.*)",
       //         },
       //       },
       //     ],

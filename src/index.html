@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.19/fullpage.css"
         integrity="sha512-z04xx19bk6Q/FewwTQYDcyJsZKDglEvuszVGtMUOeaPwTl6p9oa914VzJRBDT/HLCYzG+GQ03xfOa9jCzcNLVQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SurfBoards</title>
 </head>
@@ -607,6 +607,14 @@
                                 <div class="player__playback">
                                     <a class="player__playback-button"></a>
                                 </div>
+                                <a class="player__volume-button">
+                                    <svg  fill='white' class="player__volume-ico">
+                                        <use xlink:href="./img/sprite.svg#btn-volume"></use>
+                                    </svg>
+                                </a>
+                                <input type="range" class="player__volume">
+                             
+                                </input>
                                 <div class="player__duration">
                                     <span class="player__duration-completed">0:00</span> :
                                     <span class="player__duration-estimate">0:00</span>

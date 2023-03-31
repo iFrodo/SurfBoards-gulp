@@ -26,6 +26,10 @@ ul > li {
 //breakpoints
 $tablets: 768px;
 $phones: 480px;
-@import "./layout/*.scss";
-@import "./blocks/*.scss";
+@import "layout/media";
+@import "layout/body";
+@import "layout/container";
+@import "layout/layout";
+@import "layout/wrapper";
+@import "blocks/*.scss";
 

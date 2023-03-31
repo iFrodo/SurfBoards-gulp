@@ -96,7 +96,20 @@ const player = $("#video-player")[0];
 const playerContainer = $(".player");
 const playerStart = $(".player__start");
 const playerSplash = $(".player__splash");
+const volumeButton = $('.player__volume-button')
+const volumePayback = $('.player__volume')
+let interval;
+let videoDuration = 0;
 
+player.addEventListener('loadeddata',() =>{
+  videoDuration = player.duration
+  $(".player__duration-estimate").text(formatTime(videoDuration));
+})
+volumeButton.addEventListener('click',console.log(volumeButton))
+
+// const soundOf = ()=>{
+//   console.log(volumeButton)
+// }
 const formatTime = (timeSec) => {
   const roundTime = Math.round(timeSec);
 
@@ -111,16 +124,15 @@ const formatTime = (timeSec) => {
 };
 
 const onPlayerReady = () => {
-  const durationSec = player.duration;
-  console.log(player)
 
-  $(".player__duration-estimate").text(formatTime(durationSec));
+
+
   if (typeof interval !== "undefined") {
     clearInterval(interval);
   }
   interval = setInterval(() => {
     const completedSec = player.currentTime;
-    const completedPercent = (completedSec / durationSec) * 100;
+    const completedPercent = (completedSec / videoDuration) * 100;
     $(".player__playback-button").css({
       left: `${completedPercent}%`,
     });
@@ -157,6 +169,7 @@ let eventsInit = () => {
     }
   });
 };
+
 eventsInit();
 onPlayerReady();
 // document.addEventListener('DOMContentLoaded', ready);

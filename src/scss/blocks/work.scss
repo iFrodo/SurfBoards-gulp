@@ -111,6 +111,18 @@
   left: 0;
 
 }
+.player__volume{
+  width: rem(60px);
+  margin: 0 rem(15px);
+  height: rem(4px);
+  cursor: pointer;
+  position: relative;
+  background: url(../img/bar.svg)center center / cover no-repeat;
+  &-ico{
+    width:rem(20px);
+    height: rem(20px);
+  }
+}
 
 .player__duration {
   color: inherit;
